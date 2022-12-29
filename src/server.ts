@@ -1,6 +1,6 @@
 import express, {request, response} from 'express';
 import cors from 'cors';
-import {PrismaClient} from '@prisma/client'
+import {PrismaClient} from "@prisma/client"
 
 const app = express();
 
