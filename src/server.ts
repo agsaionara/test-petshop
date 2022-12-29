@@ -1,11 +1,8 @@
 import express, {request, response} from 'express';
 import cors from 'cors';
 import {PrismaClient} from '@prisma/client'
-import { isDataView } from 'util/types';
 
 const app = express();
-
-const port = process.env.PORT || 3333;
 
 app.use(express.json());
 
@@ -63,6 +60,6 @@ app.delete("/deletepet/:id", async (request, response) =>{
 
 })
 
-app.listen(port, () =>{
-    console.log("Servidor está rodando na porta: ", port)
+app.listen((process.env.PORT || 3333), () =>{
+    console.log("Servidor está rodando...")
 } );
